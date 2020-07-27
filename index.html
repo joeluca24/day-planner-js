@@ -10,6 +10,9 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src = "main.js" defer></script>
   <title>Work Day Scheduler</title>
 </head>
 
@@ -20,52 +23,56 @@
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container" id="planContainer">
-    <div class="row" id="9">
-      <div class="col-md-1" id="time-block ">9 am</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">10 am</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">11 am</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">12 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">1 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">2 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">3 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">4 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
-    </div>
-    <div class="row" id="10">
-      <div class="col-md-1" id="time-block ">5 pm</div>
-      <textarea class="col-md-10 textarea"></textarea>
-      <button id="saveBtn" class="col-md-1 far fa-save saveIcon"></button>
+    <div class="row" id="time-9">
+      <div class="col-md-1 time-block ">9 am</div>
+      <textarea class="col-md-10 textarea">lunch at 2</textarea>
+      <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
     </div>
 
+  </div>
+  <div class="row" id="time-10">
+    <div class="col-md-1 time-block ">10 am</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+  </div>
+  <div class="row" id="time-11">
+    <div class="col-md-1 time-block ">11 am</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+
+  </div>
+  <div class="row" id="time-12">
+    <div class="col-md-1 time-block ">12 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+
+  </div>
+  <div class="row" id="time-13">
+    <div class="col-md-1 time-block ">1 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+  </div>
+  <div class="row" id="time-14">
+    <div class="col-md-1 time-block ">2 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+
+  </div>
+  <div class="row" id="time-15">
+    <div class="col-md-1 time-block ">3 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+  </div>
+  <div class="row" id="time-16">
+    <div class="col-md-1 time-block ">4 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+  </div>
+  <div class="row" id="time-17">
+    <div class="col-md-1 time-block ">5 pm</div>
+    <textarea class="col-md-10 textarea"></textarea>
+    <button class="saveBtn col-md-1 far fa-save saveIcon"></button>
+  </div>
 
 
 
@@ -73,11 +80,11 @@
 
 
 
-    <!-- Timeblocks go here -->
+
+  <!-- Timeblocks go here -->
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
 </body>
 
 </html>
