@@ -1,39 +1,55 @@
-moment().format('MMMM Dao YYYY, h:mm:ss ');
-moment().subtract(10, 'days').calendar();
+var currentTime = moment().format('MMMM D YYYY, h:mm:ss ');
+parseInt(moment().format("H"))
+console.log(currentTime);
+$("#currentDay").text(currentTime)
 
 
-$("button").on('click', function(event){
+$("button").on('click', function (event) {
     event.preventDefault();
     console.log(this);
     var parent = $(this).parent();
     var id = parent.attr('id');
     var value = parent.find("textarea").val()
-    console.log({id, value})
+    console.log({ id, value })
 
     localStorage.setItem(id, value);
 
     //display has to run to load saved values
 });
+// this will change the color of our rows
+$(".row").each(function (i, element) {
+    var currentHour = parseInt(moment().format("H"));
+    var elementTime = parseInt($(element).attr("id").split("-")[1]);
+    if (currentHour > elementTime) {
+        $(element).addClass("hour past")
+    }
+    else if (currentHour < elementTime) {
+        $(element).addClass("hour future")
+    } else {
+        $(element).addClass("hour present")
+    }
+
+})
 
 // display function definition
-function display(){
+function display() {
     console.log("display");
-    $("textarea").each(function(){
+    $("textarea").each(function () {
         console.log(this);
         var parent = $(this).parent();
         var id = parent.attr('id');
         console.log(id);
         var value = localStorage.getItem(id)
         console.log(value)
-        if(value === null){
+        if (value === null) {
             console.log("no value yet");
         }
-        else{
+        else {
             $(this).val(value)
         }
     });
 }
-    
+
 // display has to run on page load
 display();
 
